@@ -22,24 +22,31 @@ puts "Is number_teachers greater than number_students?", number_teachers > numbe
 # this should print: "Is numberTeachers greater than numberStudents?" false
 
 # YOU DO: print the result of the comparison: is number_teachers less than number_students?
+number_teachers < number_students
 # this should print: true
 
 # YOU DO: print the result of the comparison: is number_teachers equal to string_teachers?
+number_teachers == string_teachers
 # this should print: false
 
 # YOU DO: print the result of the comparison: is number_teachers not equal to number_students?
+number_teachers != number_students
 # this should print: true
 
 # YOU DO: print the result of the comparison: is number_students greater than or equal to 20?
+number_students >= 20
 # this should print: true
 
 # YOU DO: print the result of the comparison: is number_students greater than or equal to 21?
+number_students >= 21
 # this should print: false
 
 # YOU DO: print the result of the comparison: is number_students less than or equal to 20?
+number_students <= 20
 # this should print: true
 
 # YOU DO: print the result of the comparison: is number_students less than or equal to 21?
+number_students <= 21
 # this should print: true
 
 
@@ -54,20 +61,24 @@ puts "Is number_teachers greater than number_students?", number_teachers > numbe
 
 puts 4 < 9
 #YOU DO: Explain.
+# Print the comparison of whether 4 is less than 9, should be true
 
 books = 3
 puts 4 < books
 # YOU DO: Explain.
+# Print the comparison of whether 4 is less than the number of books (3), which should be false
 
 friends = 6
 siblings = 2
 puts friends > siblings
 # YOU DO: Explain.
+# Print the comparison of whether there are more friends than siblings, true
 
 attendees = 9
 meals = 8
 puts attendees != meals
 # YOU DO: Explain.
+# Print the comparisons of whether the number of attendees is not equal to the number of meals, true
 
 
 #-------------------
@@ -90,15 +101,39 @@ age = 1
 
 # YOU DO:
 # Determine if the dog loves to play and loves treats
+if loves_to_play == true && loves_treats == true
+    puts "Yes!"
+else puts "No!"
+end
 
 
 # Determine if the dog loves to play and loves the dog park
-
+if loves_to_play == true && loves_dog_park == true
+    puts "Yes!"
+else puts "No!"
+end
 
 # Determine if the dog loves to play or loves the dog park
-
+if loves_to_play == true && loves_dog_park == true
+    puts "The dog loves to play and the dog park!"
+elsif loves_to_play == true && loves_dog_park == false
+    puts "The dog only loves to play!"
+elsif loves_to_play == false && loves_dog_park == true
+    puts "The dog only loves the dog park!"
+else loves_to_play == false && loves_dog_park == false
+    puts "The dog does not love to play or the dog park!"
+end 
 
 # Determine if the dog loves to play and is a puppy
+if loves_to_play == true && age < 2
+    puts "The dog loves to play and is a puppy!"
+elsif loves_to_play == true && age > 2 
+    puts "The dog loves to play and is NOT a puppy!"
+elsif loves_to_play == false && age < 2
+    puts "The dog does not love to play, but it is a puppy!"
+else loves_to_play == false && age > 2
+    puts "The dog does not love to play, and it is not a puppy!"
+end
 
 # What did your final line of code evaluate to? Why do you think that is? Explain.
-# ANSWER:
+# ANSWER: The dog loves to play and is a puppy! is the result I got from the code, because 'loves_to_play' is true and so is 'age < 2'
